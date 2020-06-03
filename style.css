@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16;
+}
+body {
+  height: 100vh;
+  background-color: yellow;
+}
+.menu {
+  background-color: red;
+  display: flex;
+  height: 7vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  width: 30%;
+  height: 100%;
+  margin-right: 5em;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__item h3{
+    font-size: 1.5em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-top:2em
+    
+}
+.formDiv{
+    width:50%;
+    height:80vh;
+    background-color: green;
+}
+

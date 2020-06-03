@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Citrus test</title>
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="menu">
+      <div class="menu__item">
+        <h3>Mobile registration</h3>
+      </div>
+      <div class="menu__item">
+        <h3>Email registration</h3>
+      </div>
+    </header>
+    <main>
+      <div class="formDiv">
+        <form>
+            <label for="email">Email</label>
+            <input type="text" name="email"/>
+            <br/>
+            <input type="checkbox" name="checkbox">
+            <label for="checkbox">I agree with terms and conditions</label>
+            <br/>
+            <input type="submit" value="Register">
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
