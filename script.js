@@ -9,6 +9,13 @@ const mobileButton = document.querySelector("#menu__mobile");
 
 const emailRegister = document.querySelector("#email__register");
 const mobileRegister = document.querySelector("#mobile__register");
+
+const phoneNumber =document.querySelector("#phoneNumber"); 
+const email =document.querySelector("#email")
+
+const phoneError =document.querySelector("#phoneError"); 
+const emailError =document.querySelector("#emailError")
+
 //event listeners
 
 emailRegister.addEventListener("click", () => {
@@ -43,4 +50,8 @@ emailForma.addEventListener("submit", (e) => {
 });
 mobileForma.addEventListener("submit", (e) => {
   e.preventDefault();
+});
+
+email.addEventListener("change", (e) => {
+  console.log(e.target.value)
 });

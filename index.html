@@ -8,16 +8,17 @@
   </head>
   <body>
     <div id="myModal" class="modal">
-
-        <div class="modal__content">
-            <span class="close">&times;</span>
-            <p>Voluptatibus dolores repellendus quaerat iure. Rerum distinctio provident vitae et fugiat. Consequatur
-                consequatur ut. Voluptatem delectus nulla aut fuga deleniti libero iusto provident.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eaque distinctio ea, itaque nemo error ut
-                repudiandae rerum dolores possimus impedit magni, dolorem voluptate quam architecto molestiae placeat
-                earum dicta. </p>
-        </div>
-
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <p>
+          Voluptatibus dolores repellendus quaerat iure. Rerum distinctio
+          provident vitae et fugiat. Consequatur consequatur ut. Voluptatem
+          delectus nulla aut fuga deleniti libero iusto provident. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Eum eaque distinctio ea,
+          itaque nemo error ut repudiandae rerum dolores possimus impedit magni,
+          dolorem voluptate quam architecto molestiae placeat earum dicta.
+        </p>
+      </div>
     </div>
 
     <header class="menu">
@@ -30,49 +31,67 @@
     </header>
     <main>
       <div class="formDiv">
+        <h1 class="formDiv__heading">Sign up!</h1>
         <form id="EmailForm" class="hidden">
-          <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" />
-          </div>
-          <input type="radio" id="dinars" name="currency" value="dinars" />
-          <label for="male">Dinars</label><br />
-          <input type="radio" id="dollars" name="currency" value="dollars" />
-          <label for="female">Dollars</label><br />
-          <input type="radio" id="euros" name="currency" value="euros" />
-          <label for="other">Euros</label>
-          <br />
-          <input type="checkbox" name="checkbox" />
-          <label for="checkbox">I agree with terms and conditions</label>
-          <br />
-          <input
-            type="submit"
-            value="Register"
-            class="form__button"
-            id="email__register"
-          />
+          <fieldset>
+            <legend>Email registration:</legend>
+            <div>
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="errorDiv" >
+              <p class="error" id="emailError">Error msg for email</p>
+            </div>
+
+            <input type="radio" id="dinars" name="currency" value="dinars" />
+            <label for="male">Dinars</label><br />
+            <input type="radio" id="dollars" name="currency" value="dollars" />
+            <label for="female">Dollars</label><br />
+            <input type="radio" id="euros" name="currency" value="euros" />
+            <label for="other">Euros</label>
+            <br />
+            <input type="checkbox" name="checkbox" />
+            <label for="checkbox">I agree with terms and conditions</label>
+            <br />
+            <input
+              type="submit"
+              value="Register"
+              class="form__button"
+              id="email__register"
+            />
+          </fieldset>
         </form>
 
         <form id="MobileForm" class="hidden">
-          <label for="phone">Mobile</label>
-          <input type="text" name="phone" />
+          <fieldset>
+            <legend>Mobile registration:</legend>
+            <label for="phone" >Mobile</label>
+            <input type="text" name="phone" id="phoneNumber"/>
 
-          <br />
-          <input type="radio" id="dinars" name="currency" value="dinars" />
-          <label for="male">Dinars</label><br />
-          <input type="radio" id="dollars" name="currency" value="dollars" />
-          <label for="female">Dollars</label><br />
-          <input type="radio" id="euros" name="currency" value="euros" />
-          <label for="other">Euros</label>
-          <br />
-          <input type="checkbox" name="checkbox" />
-          <label for="checkbox">I agree with terms and conditions</label>
-          <br />
-          <input type="submit" value="Register" class="form__button" id="mobile__register" />
+            <br />
+            <div class="errorDiv">
+              <p class="error" id="phoneError">Error msg for phone</p>
+            </div>
+            <input type="radio" id="dinars" name="currency" value="dinars" />
+            <label for="male">Dinars</label><br />
+            <input type="radio" id="dollars" name="currency" value="dollars" />
+            <label for="female">Dollars</label><br />
+            <input type="radio" id="euros" name="currency" value="euros" />
+            <label for="other">Euros</label>
+            <br />
+            <input type="checkbox" name="checkbox" />
+            <label for="checkbox">I agree with terms and conditions</label>
+            <br />
+            <input
+              type="submit"
+              value="Register"
+              class="form__button"
+              id="mobile__register"
+            />
+          </fieldset>
         </form>
       </div>
     </main>
-
 
     <script src="script.js"></script>
   </body>
