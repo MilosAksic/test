@@ -10,13 +10,8 @@
     <div id="myModal" class="modal">
       <div class="modal__content">
         <span class="close">&times;</span>
-        <p>
-          Voluptatibus dolores repellendus quaerat iure. Rerum distinctio
-          provident vitae et fugiat. Consequatur consequatur ut. Voluptatem
-          delectus nulla aut fuga deleniti libero iusto provident. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Eum eaque distinctio ea,
-          itaque nemo error ut repudiandae rerum dolores possimus impedit magni,
-          dolorem voluptate quam architecto molestiae placeat earum dicta.
+        <p id="registerMsg">
+          Registration completed
         </p>
       </div>
     </div>
@@ -40,14 +35,14 @@
               <input type="text" name="email" id="email" />
             </div>
             <div class="errorDiv" >
-              <p class="error" id="emailError">Error msg for email</p>
+              <p class="error" id="emailError">Please enter email address</p>
             </div>
-
-            <input type="radio" id="dinars" name="currency" value="dinars" />
+            <p>Choose your currency: </p>
+            <input type="radio" id="dinarsEmail" name="currency" value="dinars" />
             <label for="male">Dinars</label><br />
-            <input type="radio" id="dollars" name="currency" value="dollars" />
+            <input type="radio" id="dollarsEmail" name="currency" value="dollars" />
             <label for="female">Dollars</label><br />
-            <input type="radio" id="euros" name="currency" value="euros" />
+            <input type="radio" id="eurosEmail" name="currency" value="euros" />
             <label for="other">Euros</label>
             <br />
             <input type="checkbox" name="checkbox" />
@@ -72,11 +67,12 @@
             <div class="errorDiv">
               <p class="error" id="phoneError">Error msg for phone</p>
             </div>
-            <input type="radio" id="dinars" name="currency" value="dinars" />
+            <p>Choose your currency: </p>
+            <input type="radio" id="dinarsMobile" name="currency" value="dinars" />
             <label for="male">Dinars</label><br />
-            <input type="radio" id="dollars" name="currency" value="dollars" />
+            <input type="radio" id="dollarsMobile" name="currency" value="dollars" />
             <label for="female">Dollars</label><br />
-            <input type="radio" id="euros" name="currency" value="euros" />
+            <input type="radio" id="eurosMobile" name="currency" value="euros" />
             <label for="other">Euros</label>
             <br />
             <input type="checkbox" name="checkbox" />
