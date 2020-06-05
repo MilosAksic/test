@@ -177,7 +177,7 @@ fieldset {
   animation: spin 2s linear infinite;
   position: absolute;
   z-index:100;
-  left:180px;
+  left:380px;
   top:0px
 }
 
@@ -196,7 +196,7 @@ fieldset {
   100% { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .modal {
     width: 100%;
   }
@@ -205,5 +205,14 @@ fieldset {
     width: 100%;
     height: auto;
     padding: 0;
+  }
+  .menu {
+    text-align: center;
+  }
+  .menu__item {
+    text-align: center;
+  }
+  .formDiv {
+    width:90%;
   }
 }
