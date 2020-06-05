@@ -6,25 +6,27 @@
 }
 body {
   height: 100vh;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family:"Montserrat", "Times New Roman", Times, serif;
 }
 .menu {
-  background-color: red;
   display: flex;
-  height: 7vh;
+  height: 10vh;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .menu__item {
   width: 30%;
   height: 100%;
   margin-right: 5em;
-  background-color: blue;
+  background-image: url("green.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color:white;
 }
 .menu__item h3 {
   font-size: 1.5em;
@@ -48,12 +50,14 @@ main {
 }
 
 .formDiv form {
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 75%;
   font-size: 2em;
-  background-image: url("gray.jpg");
+  background-color: #218161;
+  /* background-image: url("gray.jpg"); */
   background-size: cover;
-  border: 20px solid white;
+  /* border: 10px solid white; */
+  color:white;
   
 }
 .formDiv__heading {
@@ -67,18 +71,42 @@ main {
 .hidden {
   display: none;
 }
-
+.buttonDiv{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .form__button {
-  padding: 15px 20px;
+  padding: 20px 40px;
   margin-top: 30px;
   cursor: pointer;
   font-size: 1em;
+  background-color: #f7de33;
+  border: none;
+  outline: none;
+  color: black;
 }
+.form__button:hover{
+  background-color: #fc9d3b;
+  
+}
+
+.form__button:active {
+  outline: none;
+  border: none;
+}
+
 input[name="email"],
 input[name="phone"] {
   height: 25px;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  height: 25px;
+  width: 25px;
+}
 input[name="checkbox"] {
   margin: 25px 0;
 }
@@ -110,7 +138,7 @@ input[name="checkbox"] {
 .close {
   color: red;
   float: right;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -130,12 +158,42 @@ input[name="checkbox"] {
 }
 fieldset {
   padding: 15px;
+  height:100%
 }
 #email,#phoneNumber{
   font-size: 24px;
   height:100%;
   margin-left:20px;
   padding:5px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 110px;
+  height: 110px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+  position: absolute;
+  z-index:100;
+  left:180px;
+  top:0px
+}
+
+#registerMsg{
+  font-size: 23px;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 600px) {

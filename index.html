@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="myModal" class="modal">
       <div class="modal__content">
         <span class="close">&times;</span>
-        <p id="registerMsg">
+        <p id="registerMsg" style="margin-top: 40px;">
           Registration completed
         </p>
+        <img
+          id="success"
+          style="margin: 20px 0; width: 70px; height: 70px;"
+          src="assets/error.png"
+        />
       </div>
     </div>
-
+    <div style="padding: 200px 0; text-align: center;" id="title">
+      <h1>Please choose your registration option</h1>
+    </div>
     <header class="menu">
       <div class="menu__item" id="menu__mobile">
         <h3>Mobile registration</h3>
@@ -25,65 +36,144 @@
       </div>
     </header>
     <main>
-      <div class="formDiv">
+      <div class="formDiv hidden">
         <h1 class="formDiv__heading">Sign up!</h1>
         <form id="EmailForm" class="hidden">
           <fieldset>
-            <legend>Email registration:</legend>
+            <!-- <legend>Email registration:</legend> -->
             <div>
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <label for="email">Email <span style="color:red">*</span></label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Enter your email address"
+              />
             </div>
-            <div class="errorDiv" >
+            <div class="errorDiv">
               <p class="error" id="emailError">Please enter email address</p>
             </div>
-            <p>Choose your currency: </p>
-            <input type="radio" id="dinarsEmail" name="currency" value="dinars" />
+            <p style="margin: 15px 0;">Choose your currency: <span style="color:red">*</span></p>
+            <input
+              type="radio"
+              id="dinarsEmail"
+              name="currency"
+              value="dinars"
+            />
             <label for="male">Dinars</label><br />
-            <input type="radio" id="dollarsEmail" name="currency" value="dollars" />
+            <input
+              type="radio"
+              id="dollarsEmail"
+              name="currency"
+              value="dollars"
+            />
             <label for="female">Dollars</label><br />
             <input type="radio" id="eurosEmail" name="currency" value="euros" />
             <label for="other">Euros</label>
             <br />
-            <input type="checkbox" name="checkbox" />
-            <label for="checkbox">I agree with terms and conditions</label>
-            <br />
-            <input
-              type="submit"
-              value="Register"
-              class="form__button"
-              id="email__register"
-            />
+            <div style="margin: 15px 0;">
+              <input
+                type="checkbox"
+                name="checkboxTermsEmail"
+                id="checkboxTermsEmail"
+              />
+              <label for="checkboxTermsEmail"
+                >I agree with terms and conditions</label
+              >
+              <br />
+              <input
+                type="checkbox"
+                name="checkboxNewsMail"
+                id="checkboxNewsMail"
+              />
+              <label for="checkboxNewsMail"
+                >Send me new promotions on my email</label
+              >
+            </div>
+
+            <div style="position: relative;">
+              <div class="loader hidden" id="loader"></div>
+              <div class="buttonDiv">
+                <input
+                  type="submit"
+                  value="Register"
+                  class="form__button"
+                  id="email__register"
+                />
+              </div>
+            </div>
           </fieldset>
         </form>
 
         <form id="MobileForm" class="hidden">
           <fieldset>
-            <legend>Mobile registration:</legend>
-            <label for="phone" >Mobile</label>
-            <input type="text" name="phone" id="phoneNumber"/>
-
-            <br />
-            <div class="errorDiv">
-              <p class="error" id="phoneError">Error msg for phone</p>
+            <div>
+              <label for="phone">Mobile <span style="color:red">*</span></label>
+            <input
+              type="text"
+              name="phone"
+              id="phoneNumber"
+              placeholder="Enter your phone number"
+            />
             </div>
-            <p>Choose your currency: </p>
-            <input type="radio" id="dinarsMobile" name="currency" value="dinars" />
+          
+            <div class="errorDiv">
+              <p class="error" id="phoneError">Please enter your phone</p>
+            </div>
+            <p style="margin: 15px 0;">Choose your currency: <span style="color:red">*</span></p>
+            <input
+              type="radio"
+              id="dinarsMobile"
+              name="currency"
+              value="dinars"
+            />
             <label for="male">Dinars</label><br />
-            <input type="radio" id="dollarsMobile" name="currency" value="dollars" />
+            <input
+              type="radio"
+              id="dollarsMobile"
+              name="currency"
+              value="dollars"
+            />
             <label for="female">Dollars</label><br />
-            <input type="radio" id="eurosMobile" name="currency" value="euros" />
+            <input
+              type="radio"
+              id="eurosMobile"
+              name="currency"
+              value="euros"
+            />
             <label for="other">Euros</label>
             <br />
-            <input type="checkbox" name="checkbox" />
-            <label for="checkbox">I agree with terms and conditions</label>
+            <input
+              type="checkbox"
+              name="checkboxTermsPhone"
+              id="checkboxTermsPhone"
+              style="margin: 15px 0;"
+            />
+            <label for="checkboxTermsPhone"
+              >I agree with terms and conditions</label
+            >
             <br />
             <input
-              type="submit"
-              value="Register"
-              class="form__button"
-              id="mobile__register"
+              type="checkbox"
+              name="checkboxNewsPhone"
+              id="checkboxNewsPhone"
             />
+            <label for="checkboxNewsPhone"
+              >Send me new promotions on my phone number</label
+            >
+            <br />
+            <br />
+            <div style="position: relative;">
+              <div class="loader hidden" id="loaderMobile"></div>
+            <div class="buttonDiv">
+              <input
+                type="submit"
+                value="Register"
+                class="form__button"
+                id="mobile__register"
+              />
+            </div>
+          </div>
           </fieldset>
         </form>
       </div>
